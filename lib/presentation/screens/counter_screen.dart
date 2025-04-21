@@ -27,7 +27,8 @@ class CounterScreen extends StatelessWidget{
         		mainAxisAlignment:MainAxisAlignment.center,
         		children:[
               Obx(() =>Text('${counterController.count}',style:TextStyle(fontSize: 160,fontWeight: FontWeight.w100))),
-              Text("Clicks",style:TextStyle(fontSize: 25)),
+              Obx(() =>Text("Click${counterController.count==1?" ":"s"}",style:TextStyle(fontSize: 25))),
+
         		],
         	)
         ),
